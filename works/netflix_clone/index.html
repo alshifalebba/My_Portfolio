@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Netflix Clone - Project Details</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="../../style.css">
+  <script src="../../js/theme.js"></script>
+
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+      --glass-bg: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.3);
+      --card-radius: 2rem;
+    }
+
+    [data-bs-theme="dark"] {
+      --glass-bg: rgba(15, 23, 42, 0.6);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --primary-gradient: linear-gradient(135deg, #9f1239 0%, #881337 100%);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bs-body-bg);
+      color: var(--bs-body-color);
+      transition: all 0.4s ease;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .project-title {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      padding: 120px 0 100px;
+      background: var(--primary-gradient);
+      color: white;
+      border-radius: 0 0 4rem 4rem;
+      overflow: hidden;
+      margin-bottom: -60px;
+      z-index: 1;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://www.transparenttextures.com/patterns/cubes.png');
+      opacity: 0.1;
+      pointer-events: none;
+    }
+
+    .project-title {
+      font-weight: 800;
+      font-size: 4.5rem;
+      letter-spacing: -2px;
+      margin-bottom: 15px;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .project-subtitle {
+      font-size: 1.4rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    }
+
+    /* Floating Navigation */
+    .nav-buttons {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      display: flex;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-btn:hover {
+      background: white;
+      color: #e11d48;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Theme Toggle Overrides for Redesign */
+    #theme-toggle-container {
+      position: absolute;
+      top: 35px;
+      right: 30px;
+      z-index: 1000;
+    }
+
+    /* Glass Cards */
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(15px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--card-radius);
+      padding: 3rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      margin-bottom: 4rem;
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    /* Video Section */
+    .video-section {
+      max-width: 1000px;
+      margin: 0 auto 5rem;
+    }
+
+    .video-wrapper {
+      position: relative;
+      border-radius: 2.5rem;
+      overflow: hidden;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.4);
+      background: #111;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 600px; /* Cinematic height */
+      max-height: 80vh;
+      margin-bottom: 2rem;
+    }
+
+    [data-bs-theme="dark"] .video-wrapper {
+      box-shadow: 0 0 50px rgba(99, 102, 241, 0.1);
+      background: #000;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 1rem;
+      display: block;
+    }
+
+    /* Buttons */
+    .action-group {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-premium {
+      padding: 18px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: none;
+    }
+
+    .btn-github-premium {
+      background: #1e293b;
+      color: white;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .btn-github-premium:hover {
+      background: #0f172a;
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      padding: 80px 0 40px;
+      text-align: center;
+      border-top: 1px solid var(--sidebar-border);
+      background: var(--sidebar-bg);
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+
+    .social-link {
+      color: var(--bs-body-color);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+    }
+
+    .social-link:hover {
+      color: #e11d48;
+      transform: translateY(-5px);
+      border-color: #e11d48;
+      box-shadow: 0 10px 20px rgba(225, 29, 72, 0.2);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .project-title { font-size: 2.2rem; letter-spacing: -1px; word-wrap: break-word; }
+      .project-subtitle { font-size: 1rem; padding: 0 10px; margin-bottom: 20px; }
+      .nav-buttons { top: 10px; left: 10px; flex-direction: column; gap: 6px; width: calc(100% - 20px); }
+      .nav-btn { padding: 8px 12px; font-size: 0.8rem; width: fit-content; }
+      .glass-card { padding: 1rem; border-radius: 1.25rem; overflow: hidden; }
+      #theme-toggle-container { top: 10px; right: 10px; }
+      .video-wrapper { height: 320px; padding: 8px; border-radius: 1.25rem; }
+      .action-group { gap: 10px; flex-direction: column; width: 100%; }
+      .btn-premium { padding: 12px 20px; font-size: 0.95rem; width: 100%; justify-content: center; }
+      .social-icons { gap: 15px; flex-wrap: wrap; }
+      .social-link { width: 40px; height: 40px; }
+      .row { margin-left: -10px; margin-right: -10px; }
+      .col-md-8, .col-md-4 { padding-left: 10px; padding-right: 10px; }
+     }
+  </style>
+</head>
+
+<body>
+
+  <!-- Icons for Footer -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="mail" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4l-8 5l-8-5V6l8 5l8-5v2Z"/></symbol>
+    <symbol id="linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></symbol>
+    <symbol id="github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 8.84 21.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></symbol>
+    <symbol id="instagram" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></symbol>
+  </svg>
+
+  <header class="hero-section">
+    <div id="theme-toggle-container">
+      <div class="theme-switch-wrapper mt-0">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider">
+            <svg class="sun-icon-toggle" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon-toggle" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <a href="../../index.html" class="nav-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Home
+      </a>
+      <a href="../../index.html#portfolio" class="nav-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to Works
+      </a>
+    </div>
+
+    <div class="container text-center">
+      <h1 class="project-title">Netflix Clone</h1>
+      <p class="project-subtitle">A Netflix-inspired UI project built to showcase streaming app design and front-end layout skills.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+
+        <!-- Description Section -->
+        <div class="glass-card">
+          <h2 class="fw-bold mb-4">About the Project</h2>
+          <div class="row g-4">
+            <div class="col-md-8">
+              <p class="lead mb-3">This project is a visually striking replication of the Netflix user interface.</p>
+              <p class="mb-3">It focuses on pixel-perfect layouts, responsive design, and providing an immersive user experience similar to popular streaming platforms.</p>
+              <p class="mb-0">Built to showcase modern front-end capabilities, it includes features such as dynamic content rows, smooth scrolling, and hover animations that are standard in premium applications.</p>
+            </div>
+            <div class="col-md-4">
+              <div class="p-4 rounded-4 bg-primary bg-opacity-10 border border-primary border-opacity-20 h-100">
+                <h5 class="fw-bold mb-3">Key Features</h5>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-2">🎬 UI Replication</li>
+                  <li class="mb-2">📱 Responsive Design</li>
+                  <li class="mb-2">✨ Hover Animations</li>
+                  <li>📜 Smooth Scrolling</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Demo Video Section -->
+        <div class="video-section text-center">
+          <h3 class="fw-bold mb-4">Product Showcase</h3>
+          <div class="video-wrapper">
+            <video controls poster="">
+              <source src="../../public/videos/netflix-demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="action-group mb-5">
+          <a href="https://github.com/alshifalebba/Netflix-Clone" target="_blank" class="btn-premium btn-github-premium">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            View on GitHub
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="social-icons">
+        <a href="https://github.com/alshifalebba" target="_blank" class="social-link" title="GitHub">
+          <svg width="24" height="24"><use xlink:href="#github"></use></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/alshifa-m-90a898365/" target="_blank" class="social-link" title="LinkedIn">
+          <svg width="24" height="24"><use xlink:href="#linkedin"></use></svg>
+        </a>
+        <a href="https://www.instagram.com/alshifa_lebba/" target="_blank" class="social-link" title="Instagram">
+          <svg width="24" height="24"><use xlink:href="#instagram"></use></svg>
+        </a>
+        <a href="mailto:alshifam2004@gmail.com" class="social-link" title="Email">
+          <svg width="24" height="24"><use xlink:href="#mail"></use></svg>
+        </a>
+      </div>
+      <p class="text-muted mb-0">&copy; 2026 Alshifa M. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
