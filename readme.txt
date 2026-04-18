@@ -1,69 +1,101 @@
-Get PRO Here:
-https://templatesjungle.gumroad.com/l/julia-onepage-portfolio
+# 🌐 Personal Portfolio Website
 
-It is a free HTML CSS template by TemplatesJungle.com
-You can use this template as a starter template and start building as you require.
+A modern and responsive personal portfolio website built to showcase my projects, skills, and experience as a Flutter Developer.
 
-The code is consistent and can be easily maintained as we have followed a good coding standards. We want everyone to easily understand it and modify it according to their requirement. As the main goal of providing these templates is to give you something to work on before even starting.
+🔗 **Live Website:**
+https://portfolio-c7caa.web.app/
 
+---
 
-FREE FOR BOTH PERSONAL AND COMMERCIAL USE
+## 🚀 About the Project
 
-This HTML Template is provided by TemplatesJungle.com and is free to use in both personal and commercial projects as long as you don't remove our credit link in the footer.
+This portfolio is designed to present my work in a clean, professional, and interactive way. It highlights my mobile app projects, development skills, and provides an easy way for recruiters and collaborators to connect with me.
 
-However, you can remove the credit link by paying for No Attribution version of the template.
+The website focuses on **modern UI design**, **smooth user experience**, and **responsive layouts** across all devices.
 
+---
 
-RIGHTS
+## ✨ Features
 
-You are allowed to use it in your personal projects and commercial projects.
+* 🌗 Dark Mode & Light Mode Toggle
+* 📱 Fully Responsive Design (Mobile, Tablet, Desktop)
+* 🧩 Dedicated Work Detail Pages for Projects
+* 🎬 Demo Video Showcase for Apps
+* 📦 APK Download & GitHub Integration
+* 🔗 Social Media Integration (GitHub, LinkedIn, Instagram, Email)
+* ⚡ Smooth Animations & Clean UI
+* 🎯 Modern Portfolio Layout
 
-You can modify and sell it to your clients.
+---
 
+## 🛠️ Tech Stack
 
-PROHIBITIONS
+* HTML5
+* CSS3
+* JavaScript
+* Firebase Hosting
 
-You cannot remove the credit link which links back to templatesjungle.com.
+---
 
-You are not permitted to resell or redistribute (paid or free) as it is. 
+## 📂 Project Structure
 
-You cannot use it to build premium templates, themes or any other goods to be sold on marketplaces.
+```
+portfolio/
+│
+├── index.html
+├── css/
+├── js/
+├── images/
+├── works/
+│   ├── bookloop/
+│   ├── goalsync/
+│
+└── assets/
+```
 
-If you want to share the free resource in your blog, you must point it to original TemplatesJungle.com resource page. 
+---
 
-You cannot host the download file in your website.
+## 📱 Projects Showcased
 
+### 📚 BookLoop
 
-SUPPORT
+A community-based mobile application for readers and writers to explore books, share thoughts, and participate in discussions.
 
-You can contact us to report any bugs and errors in the template. We will try and fix them immediately although it's a free resource.
+### 🎨 Walify
 
-Feel free to let us know about what you want to see in the future downloads. We will definitely give it a thought while creating our next freebie.
+A wallpaper application with categorized high-quality wallpapers and a modern UI experience.
 
+### 🎯 GoalSync
 
-CREDITS & REFERENCES
+A productivity app focused on task management, tracking progress, and improving daily performance.
 
-https://getbootstrap.com/
+---
 
-Stock Photos
-https://unsplash.com/
-https://www.freepik.com/
-https://www.pexels.com/
+## 🧑‍💻 About Me
 
-Fonts
-Google fonts
-https://fonts.google.com/
+I am a Flutter Developer passionate about building high-performance mobile applications with clean architecture and modern UI/UX.
 
-Icons
-https://icomoon.io/
+* 📱 Flutter & Dart
+* 🔥 Firebase (Auth, Firestore, Storage)
+* 🔗 REST API Integration
+* 🧠 State Management (BLoC, Provider)
 
-JQuery Plugins
+---
 
-Swiper Slider - https://swiperjs.com/
-Slick Slider - https://kenwheeler.github.io/slick/
-Chocolat.js – a Free Lightbox Plugin -http://chocolat.insipi.de/
-Magnific Lightbox - https://github.com/dimsemenov/Magnific-Popup
+## 📬 Contact
 
-Thanks for downloading from TemplatesJungle.com !
+📧 Email: [alshifam2004@gmail.com](mailto:alshifam2004@gmail.com)
+🔗 GitHub: https://github.com/your-username
+📸 Instagram: https://www.instagram.com/alshifa_lebba/
 
+---
 
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
