@@ -6,6 +6,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="author" content="">
@@ -16,14 +19,14 @@
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="js/theme.js"></script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-body homepage post-template" data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+<body class="bg-body homepage post-template" data-bs-spy="scroll" data-bs-target="#one-page-menu"
+  data-bs-smooth-scroll="true" data-bs-smooth-scroll="true" tabindex="0"> <svg xmlns="http://www.w3.org/2000/svg"
+    style="display: none;">
     <defs>
       <symbol xmlns="http://www.w3.org/2000/svg" id="instagram" viewBox="0 0 24 24">
         <path fill="currentColor"
@@ -43,7 +46,7 @@
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" id="youtube" viewBox="0 0 15 15">
         <path fill="currentColor"
-          d="m1.61 12.738l-.104.489l.105-.489Zm11.78 0l.104.489l-.105-.489Zm0-10.476l.104-.489l-.105.489Zm-11.78 0l.106.489l-.105-.489ZM6.5 5.5l.277-.416A.5.5 0 0 0 6 5.5h.5Zm0 4H6a.5.5 0 0 0 .777.416L6.5 9.5Zm3-2l.277.416a.5.5 0 0 0 0-.832L9.5 7.5ZM0 3.636v7.728h1V3.636H0Zm15 7.728V3.636h-1v7.728h1ZM1.506 13.227c3.951.847 8.037.847 11.988 0l-.21-.978a27.605 27.605 0 0 1-11.568 0l-.21.978ZM13.494 1.773a28.606 28.606 0 0 0-11.988 0l.21.978a27.607 27.607 0 0 1 11.568 0l.21-.978ZM15 3.636c0-.898-.628-1.675-1.506-1.863l-.21.978c.418.09.716.458.716.885h1Zm-1 7.728a.905.905 0 0 1-.716.885l.21.978A1.905 1.905 0 0 0 15 11.364h-1Zm-14 0c0 .898.628 1.675 1.506 1.863l.21-.978A.905.905 0 0 1 1 11.364H0Zm1-7.728c0-.427.298-.796.716-.885l-.21-.978A1.905 1.905 0 0 0 0 3.636h1ZM6 5.5v4h1v-4H6Zm.777 4.416l3-2l-.554-.832l-3 2l.554.832Zm3-2.832l-3-2l-.554.832l3 2l.554-.832Z" />
+          d="m1.61 12.738l-.104.489l.105-.489Zm11.78 0l.104.489l-.105-.489Zm0-10.476l.104-.489l-.105.489ZM6.5 5.5l.277-.416A.5.5 0 0 0 6 5.5h.5Zm0 4H6a.5.5 0 0 0 .777.416L6.5 9.5Zm3-2l.277.416a.5.5 0 0 0 0-.832L9.5 7.5ZM0 3.636v7.728h1V3.636H0Zm15 7.728V3.636h-1v7.728h1ZM1.506 13.227c3.951.847 8.037.847 11.988 0l-.21-.978a27.605 27.605 0 0 1-11.568 0l-.21.978ZM13.494 1.773a28.606 28.606 0 0 0-11.988 0l.21.978a27.607 27.607 0 0 1 11.568 0l.21-.978ZM15 3.636c0-.898-.628-1.675-1.506-1.863l-.21.978c.418.09.716.458.716.885h1Zm-1 7.728a.905.905 0 0 1-.716.885l.21.978A1.905 1.905 0 0 0 15 11.364h-1Zm-14 0c0 .898.628 1.675 1.506 1.863l.21-.978A.905.905 0 0 1 1 11.364H0Zm1-7.728c0-.427.298-.796.716-.885l-.21-.978A1.905 1.905 0 0 0 0 3.636h1ZM6 5.5v4h1v-4H6Zm.777 4.416l3-2l-.554-.832l-3 2l.554.832Zm3-2.832l-3-2l-.554.832l3 2l.554-.832Z" />
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" id="dribble" viewBox="0 0 15 15">
         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -173,20 +176,14 @@
           d="M12 2A10 10 0 0 0 8.84 21.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
       </symbol>
     </defs>
-  </svg>
-
-  <a class="menu-btn"><span></span></a>
-
+  </svg> <a class="menu-btn"><span></span></a>
   <div class="container-fluid overflow-hidden">
-
     <header id="header-nav" class="col-lg-2 position-fixed px-5 bg-white h-100">
       <div class="header-wrap d-flex flex-column justify-content-between h-100">
         <div class="navigation">
-          <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox">
-              <input type="checkbox" id="checkbox" />
-              <div class="slider">
-                <svg class="sun-icon-toggle" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          <div class="theme-switch-wrapper"> <label class="theme-switch" for="checkbox"> <input type="checkbox"
+                id="checkbox" />
+              <div class="slider"> <svg class="sun-icon-toggle" width="16" height="16" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="5"></circle>
                   <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -197,95 +194,67 @@
                   <line x1="21" y1="12" x2="23" y2="12"></line>
                   <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                   <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-                <svg class="moon-icon-toggle" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                </svg> <svg class="moon-icon-toggle" width="16" height="16" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-              </div>
-            </label>
-          </div>
-
-          <div class="site-logo mt-2">
-            <a href="index.html">
-              <img src="images/logo_image-removebg.png" alt="logo" class="img-fluid">
-            </a>
-          </div>
-
+                </svg> </div>
+            </label> </div>
+          <div class="site-logo mt-2"> <a href="index.html"> <img src="images/logo_image-removebg.png" alt="logo"
+                class="img-fluid"> </a> </div>
           <nav id="one-page-menu" class="vertical-menu my-5">
-            <ul class="menu-list list-unstyled">
+            <ul class="nav menu-list list-unstyled flex-column">
               <li><a href="#home" class="nav-link">Home</a></li>
               <li><a href="#about" class="nav-link">About</a></li>
               <li><a href="#experience" class="nav-link">Experience</a></li>
               <li><a href="#portfolio" class="nav-link">Works</a></li>
               <li><a href="#contact" class="nav-link">Contact</a></li>
-
             </ul>
           </nav>
         </div>
         <div class="mt-5">
-          <div class="email-links">
-            <a href="mailto:contact@yoursite.com" class="py-3 my-3 border-bottom d-flex">alshifam2004@gmail.com</a>
-          </div>
+          <div class="email-links"> <a href="mailto:contact@yoursite.com"
+              class="py-3 my-3 border-bottom d-flex">alshifam2004@gmail.com</a> </div>
           <ul class="list-unstyled d-flex justify-content-start flex-wrap gap-3">
-            <li>
-              <a href="mailto:alshifam2004@gmail.com" class="text-dark">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+            <li> <a href="mailto:alshifam2004@gmail.com" class="text-dark"> <svg width="24" height="24"
+                  viewBox="0 0 24 24">
                   <use xlink:href="#mail"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/alshifa-m-90a898365/" target="_blank" class="text-dark">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                </svg> </a> </li>
+            <li> <a href="https://www.linkedin.com/in/alshifa-m-90a898365/" target="_blank" class="text-dark"> <svg
+                  width="24" height="24" viewBox="0 0 24 24">
                   <use xlink:href="#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/alshifa_lebba/" target="_blank" class="text-dark">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                </svg> </a> </li>
+            <li> <a href="https://www.instagram.com/alshifa_lebba/" target="_blank" class="text-dark"> <svg width="24"
+                  height="24" viewBox="0 0 24 24">
                   <use xlink:href="#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/alshifalebba" target="_blank" class="text-dark">
-                <svg width="24" height="24" viewBox="0 0 24 24">
+                </svg> </a> </li>
+            <li> <a href="https://github.com/alshifalebba" target="_blank" class="text-dark"> <svg width="24"
+                  height="24" viewBox="0 0 24 24">
                   <use xlink:href="#github"></use>
-                </svg>
-              </a>
-            </li>
+                </svg> </a> </li>
           </ul>
         </div>
       </div>
     </header>
-
     <main class="col-lg-10 offset-lg-2">
-      <div class="container">
-
-        <!-- content wrapper -->
+      <div class="container"> <!-- content wrapper -->
         <div class="justify-content-center px-1 mx-1 px-xl-5 mx-xl-5">
-
           <section id="home" class="py-5 bg-text" data-text="01">
             <div class="row">
               <div class="col-lg-6">
-                <div class="banner-image text-center" data-aos="fade-right">
-                  <img src="images/profilehome.png" alt="banner" class="img-fluid" class="img-fluid">
+                <div class="banner-image text-center hero-image-container">
+                  <div class=""> <img src="images/profilehome.png" alt="banner" class="img-fluid"> </div>
                 </div>
               </div>
               <div class="col-lg-6">
-                <div class="banner-content my-1 pt-1 my-lg-5 pt-lg-5" data-aos="fade-in">
-                  <span class="text-muted text-uppercase">Developer</span>
-                  <h1 class="banner-title display-1 lh-1 txt-fx slide-up">ALSHIFA M</h1>
+                <div class="banner-content my-1 pt-1 my-lg-5 pt-lg-5"> <span
+                    class="text-muted text-uppercase reveal-text">Developer</span>
+                  <h1 class="banner-title display-1 lh-1 reveal-text">ALSHIFA M</h1>
                 </div>
               </div>
             </div>
-
             <div class="row">
               <div class="col-lg-3">
-                <div class="icon-box" data-aos="fade-up">
-                  <span>01</span>
+                <div class="icon-box reveal-text" data-delay="100"> <span>01</span>
                   <h3 class="sub-heading">Flutter & Kotlin Development</h3>
                   <p>Flutter Developer specialized in building high-performance cross-platform mobile applications using
                     Dart and modern Flutter architecture. Experienced in creating scalable, maintainable apps with clean
@@ -293,8 +262,7 @@
                 </div>
               </div>
               <div class="col-lg-3">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <span>02</span>
+                <div class="icon-box reveal-text" data-delay="200"> <span>02</span>
                   <h3 class="sub-heading">UI & Front-End Development</h3>
                   <p>Skilled in designing responsive and visually appealing user interfaces using Flutter widgets.
                     Focused on delivering seamless user experiences with pixel-perfect UI, animations, and adaptive
@@ -302,177 +270,193 @@
                 </div>
               </div>
               <div class="col-lg-3">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <span>03</span>
+                <div class="icon-box reveal-text" data-delay="300"> <span>03</span>
                   <h3 class="sub-heading">API & Backend Integration</h3>
                   <p>Experienced in integrating REST APIs and Firebase services including Authentication and Firestore.
                     Strong understanding of data handling, asynchronous programming, and building efficient
                     app-to-backend communication.</p>
                 </div>
               </div>
-              <div class="col-lg-3">
-                <a href="#portfolio" class="btn btn-dark text-uppercase py-4 px-5" data-aos="fade-up"
-                  data-aos-delay="300">View All Work</a>
-              </div>
+              <div class="col-lg-3"> <a href="#portfolio" class="btn btn-dark text-uppercase py-4 px-5 reveal-text"
+                  data-delay="400">View All Work</a> </div>
             </div>
           </section>
-
           <section id="about" class="my-5 py-5 bg-text" data-text="02">
-            <div class="row d-flex flex-wrap" data-aos="fade-up">
-              <div class="col-lg-6 pb-5">
-                <span class="text-muted text-uppercase">BIODATA</span>
-                <h2 class="display-4 txt-fx slide-up">Education</h2>
-                <div class="data-info py-3" data-aos="fade-up">
-                  <span class="meta-date">2021 - 2025</span>
+            <div class="row d-flex flex-wrap reveal-text">
+              <div class="col-lg-6 pb-5"> <span class="text-muted text-uppercase reveal-text">BIODATA</span>
+                <h2 class="display-4 reveal-text">Education</h2>
+                <div class="data-info py-3 reveal-text"> <span class="meta-date">2021 - 2025</span>
                   <h3 class="info-title">BTech in Computer Science and Engineering</h3>
                   <p>APJ Abdul Kalam Technological University</p>
                 </div>
-                <div class="data-info" data-aos="fade-up" data-aos-delay="100">
-                  <span class="meta-date">2025 - 2026</span>
+                <div class="data-info reveal-text" data-delay="100"> <span class="meta-date">2025 - 2026</span>
                   <h3 class="info-title">Flutter Development</h3>
                   <p>Avodha Edutech</p>
                 </div>
-                <div class="data-info" data-aos="fade-up" data-aos-delay="100">
-                  <span class="meta-date">2025 - 2026</span>
+                <div class="data-info reveal-text" data-delay="200"> <span class="meta-date">2025 - 2026</span>
                   <h3 class="info-title">Android Development</h3>
                   <p>Avodha Edutech</p>
                 </div>
               </div>
               <div class="col-lg-6 pb-5">
-                <h2 class="display-4 txt-fx slide-up">Experiences</h2>
-                <div class="data-info py-3" data-aos="fade-up" data-aos-delay="200">
-                  <span class="meta-date">2022 - 2022</span>
+                <h2 class="display-4 reveal-text">Experiences</h2>
+                <div class="data-info py-3 reveal-text" data-delay="200"> <span class="meta-date">2022 - 2022</span>
                   <h3 class="info-title">Python Intern</h3>
                   <p>Python Intern with hands-on experience in scripting, data analysis using NumPy and Pandas, and task
                     automation.</p>
                 </div>
-                <div class="data-info" data-aos="fade-up" data-aos-delay="300">
-                  <span class="meta-date">2023 - 2025</span>
+                <div class="data-info reveal-text" data-delay="300"> <span class="meta-date">2023 - 2025</span>
                   <h3 class="info-title">System admin & Sales executive</h3>
                   <p>System Administrator experienced in configuring, maintaining, and troubleshooting hardware and
                     software systems to ensure reliable operations.</p>
                 </div>
               </div>
             </div>
-            <div class="row d-flex flex-wrap" data-aos="fade-up">
+            <div class="row d-flex flex-wrap reveal-text">
               <div class="col-lg-6 pb-5">
-                <h2 class="display-4 txt-fx slide-up">Interests</h2>
-                <div class="data-info py-3" data-aos="fade-up">
-                  <span class="meta-date"></span>
+                <h2 class="display-4 reveal-text">Interests</h2>
+                <div class="data-info py-3 reveal-text"> <span class="meta-date"></span>
                   <h3 class="info-title">Flutter Application Development</h3>
                   <p>Passionate about building real-world Flutter applications with clean architecture and scalable
                     structure. Focused on developing feature-rich apps with smooth performance and modern UI/UX
                     standards.</p>
                 </div>
-                <div class="data-info" data-aos="fade-up" data-aos-delay="100">
-                  <span class="meta-date"></span>
+                <div class="data-info reveal-text" data-delay="100"> <span class="meta-date"></span>
                   <h3 class="info-title">State Management & App Architecture</h3>
                   <p>Continuously learning and implementing advanced state management solutions like BLoC and Provider.
                     Interested in building well-structured applications using Clean Architecture and best development
                     practices.</p>
                 </div>
-                <div class="data-info" data-aos="fade-up" data-aos-delay="100">
-                  <span class="meta-date"></span>
+                <div class="data-info reveal-text" data-delay="100"> <span class="meta-date"></span>
                   <h3 class="info-title">Firebase & Backend Services</h3>
                   <p>Hands-on experience with Firebase including Authentication, Firestore, and Storage. Skilled in
                     building secure, real-time, and scalable backend solutions for mobile applications.</p>
                 </div>
               </div>
               <div class="col-lg-6 pb-5">
-                <h2 class="display-4 txt-fx slide-up">References</h2>
-                <div class="data-info py-3" data-aos="fade-up" data-aos-delay="200">
-                  <span class="meta-date">2021 - 2025</span>
+                <h2 class="display-4 reveal-text">References</h2>
+                <div class="data-info py-3 reveal-text" data-delay="200"> <span class="meta-date">2021 - 2025</span>
                   <h3 class="info-title">Prof Athira B</h3>
                   <p>Academic reference available upon request.</p>
                 </div>
-                <div class="data-info" data-aos="fade-up" data-aos-delay="300">
-                  <span class="meta-date">2025 - 2026</span>
+                <div class="data-info reveal-text" data-delay="300"> <span class="meta-date">2025 - 2026</span>
                   <h3 class="info-title">Mr Amarjith</h3>
                   <p>Professional training reference available upon request.</p>
                 </div>
               </div>
             </div>
           </section>
-
           <section id="experience" class="my-5 py-5 bg-text" data-text="03">
             <div class="row justify-content-center mb-5">
-              <div class="col-lg-6" data-aos="fade-up">
-                <span class="text-muted text-uppercase">introduction</span>
-                <h2 class="display-1 txt-fx slide-up">Experienced Creative mind</h2>
+              <div class="col-lg-6 reveal-text"> <span class="text-muted text-uppercase">introduction</span>
+                <h2 class="display-1 reveal-text">Experienced Creative mind</h2>
                 <p>Passionate software developer focused on building reliable, user-friendly applications with clean
                   code and modern technologies.</p>
               </div>
             </div>
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-
-                <div class="skill-chart py-4" data-aos="fade-up">
-                  <ul class="skill-chart-list list-unstyled">
-                    <li>
-                      <div class="chart-header d-flex justify-content-between">
-                        <span class="skill-title">Flutter</span>
-                        <span class="percentage">95%</span>
-                      </div>
-                      <div class="chart-border">
-                        <div class="chart-percentage ninety-five-percent"></div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="chart-header d-flex justify-content-between">
-                        <span class="skill-title">Dart</span>
-                        <span class="percentage">90%</span>
-                      </div>
-                      <div class="chart-border">
-                        <div class="chart-percentage ninety-percent"></div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="chart-header d-flex justify-content-between">
-                        <span class="skill-title">Kotlin</span>
-                        <span class="percentage">80%</span>
-                      </div>
-                      <div class="chart-border">
-                        <div class="chart-percentage eighty-percent"></div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="chart-header d-flex justify-content-between">
-                        <span class="skill-title">Java</span>
-                        <span class="percentage">75%</span>
-                      </div>
-                      <div class="chart-border">
-                        <div class="chart-percentage seventy-five-percent"></div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="chart-header d-flex justify-content-between">
-                        <span class="skill-title">Html/CSS</span>
-                        <span class="percentage">50%</span>
-                      </div>
-                      <div class="chart-border">
-                        <div class="chart-percentage fifty-percent"></div>
-                      </div>
-                    </li>
-                  </ul>
+            <div class="row g-4 reveal-text">
+              <!-- Programming Languages -->
+              <div class="col-md-6 col-lg-4">
+                <div class="skill-category-card h-100 p-4 rounded-4 shadow-sm border border-opacity-10">
+                  <h4 class="fw-bold mb-3 d-flex align-items-center">
+                    <span class="category-icon me-2">💻</span> Programming Languages
+                  </h4>
+                  <div class="skill-tags d-flex flex-wrap gap-2">
+                    <span class="skill-tag">Dart</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">Kotlin</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                  </div>
                 </div>
               </div>
+
+              <!-- Frameworks & Technologies -->
+              <div class="col-md-6 col-lg-4">
+                <div class="skill-category-card h-100 p-4 rounded-4 shadow-sm border border-opacity-10">
+                  <h4 class="fw-bold mb-3 d-flex align-items-center">
+                    <span class="category-icon me-2">🚀</span> Frameworks & Tech
+                  </h4>
+                  <div class="skill-tags d-flex flex-wrap gap-2">
+                    <span class="skill-tag">Flutter</span>
+                    <span class="skill-tag">REST APIs</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- State Management -->
+              <div class="col-md-6 col-lg-4">
+                <div class="skill-category-card h-100 p-4 rounded-4 shadow-sm border border-opacity-10">
+                  <h4 class="fw-bold mb-3 d-flex align-items-center">
+                    <span class="category-icon me-2">🧠</span> State Management
+                  </h4>
+                  <div class="skill-tags d-flex flex-wrap gap-2">
+                    <span class="skill-tag">Provider</span>
+                    <span class="skill-tag">BLoC</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Database -->
+              <div class="col-md-6 col-lg-4">
+                <div class="skill-category-card h-100 p-4 rounded-4 shadow-sm border border-opacity-10">
+                  <h4 class="fw-bold mb-3 d-flex align-items-center">
+                    <span class="category-icon me-2">💾</span> Database
+                  </h4>
+                  <div class="skill-tags d-flex flex-wrap gap-2">
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">SQLite</span>
+                    <span class="skill-tag">Hive</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tools & Platforms -->
+              <div class="col-md-6 col-lg-4">
+                <div class="skill-category-card h-100 p-4 rounded-4 shadow-sm border border-opacity-10">
+                  <h4 class="fw-bold mb-3 d-flex align-items-center">
+                    <span class="category-icon me-2">🛠️</span> Tools & Platforms
+                  </h4>
+                  <div class="skill-tags d-flex flex-wrap gap-2">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">Android Studio</span>
+                    <span class="skill-tag">VS Code</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Architecture Patterns -->
+              <div class="col-md-6 col-lg-4">
+                <div class="skill-category-card h-100 p-4 rounded-4 shadow-sm border border-opacity-10">
+                  <h4 class="fw-bold mb-3 d-flex align-items-center">
+                    <span class="category-icon me-2">🏗️</span> Architecture
+                  </h4>
+                  <div class="skill-tags d-flex flex-wrap gap-2">
+                    <span class="skill-tag">MVVM</span>
+                    <span class="skill-tag">MVC</span>
+                    <span class="skill-tag">Clean</span>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </section>
-
           <section id="portfolio" class="my-5 py-5 bg-text" data-text="04">
-            <div class="section-header my-5" data-aos="fade-up">
+            <div class="section-header my-5">
               <div class="row justify-content-center g-5">
-                <div class="col-lg-4">
-                  <span class="text-muted text-uppercase">some of my recent works</span>
-                  <h2 class="display-2 txt-fx slide-up">Portfolio</h2>
+                <div class="col-lg-4 reveal-text"> <span class="text-muted text-uppercase">some of my recent
+                    works</span>
+                  <h2 class="display-2 reveal-text">Portfolio</h2>
                 </div>
-                <div class="col-lg-4" data-aos="fade-up">
+                <div class="col-lg-4 reveal-text" data-delay="100">
                   <p>Selected works highlighting my technical skills, creativity, and commitment to quality development.
                   </p>
                 </div>
               </div>
             </div>
-            <div class="portfolio-content py-4" data-aos="fade-up">
+            <div class="portfolio-content py-4 reveal-text">
               <style>
                 .portfolio-scroll-container {
                   display: flex;
@@ -545,203 +529,131 @@
                   color: var(--muted-text);
                 }
               </style>
-
-              <div class="portfolio-scroll-container">
-
-                <!-- GitHub Profile Card (FIRST) -->
+              <div class="portfolio-scroll-container"> <!-- GitHub Profile Card (FIRST) -->
                 <div class="portfolio-card-wrapper">
-                  <div class="project-card common-project-card">
-                    <a href="https://github.com/alshifalebba" target="_blank" class="text-decoration-none">
-                      <div class="image-holder">
-                        <img src="images/github character.png" alt="GitHub Profile" class="img-fluid">
-                      </div>
+                  <div class="project-card common-project-card"> <a href="https://github.com/alshifalebba"
+                      target="_blank" class="text-decoration-none">
+                      <div class="image-holder"> <img src="images/github character.png" alt="GitHub Profile"
+                          class="img-fluid"> </div>
                       <div class="caption mt-4 px-2">
                         <h4 class="fw-bold mb-2">GitHub Profile</h4>
                         <p class="text-muted mb-0">You can see my other works on Github, Tap to view my Github Profile
                           ....</p>
                       </div>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- BookLoop Card -->
+                    </a> </div>
+                </div> <!-- BookLoop Card -->
                 <div class="portfolio-card-wrapper">
-                  <div class="project-card common-project-card">
-                    <a href="works/bookloop/index.html" class="text-decoration-none">
-                      <div class="image-holder">
-                        <img src="images/bookloop_logo.png" alt="BookLoop App Logo" class="img-fluid">
-                      </div>
+                  <div class="project-card common-project-card"> <a href="works/bookloop/index.html"
+                      class="text-decoration-none">
+                      <div class="image-holder"> <img src="images/bookloop_logo.png" alt="BookLoop App Logo"
+                          class="img-fluid"> </div>
                       <div class="caption mt-4 px-2">
                         <h4 class="fw-bold mb-2">BookLoop</h4>
                         <p class="text-muted mb-0">Discover, track, and share your reading journey with this modern
                           application.</p>
                       </div>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- GoalSync Card -->
+                    </a> </div>
+                </div> <!-- GoalSync Card -->
                 <div class="portfolio-card-wrapper">
-                  <div class="project-card common-project-card">
-                    <a href="works/goalsync/index.html" class="text-decoration-none">
-                      <div class="image-holder">
-                        <img src="images/GoalSync.png" alt="GoalSync App Logo" class="img-fluid">
-                      </div>
+                  <div class="project-card common-project-card"> <a href="works/goalsync/index.html"
+                      class="text-decoration-none">
+                      <div class="image-holder"> <img src="images/GoalSync.png" alt="GoalSync App Logo"
+                          class="img-fluid"> </div>
                       <div class="caption mt-4 px-2">
                         <h4 class="fw-bold mb-2">GoalSync</h4>
                         <p class="text-muted mb-0">A productivity app focused on goal tracking, consistency, and
                           progress management.</p>
                       </div>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- Netflix Clone Card -->
+                    </a> </div>
+                </div> <!-- Netflix Clone Card -->
                 <div class="portfolio-card-wrapper">
-                  <div class="project-card common-project-card">
-                    <a href="works/netflix_clone/index.html" class="text-decoration-none">
-                      <div class="image-holder">
-                        <img src="images/netflix_clone.jpg" alt="Netflix Clone Logo" class="img-fluid">
-                      </div>
+                  <div class="project-card common-project-card"> <a href="works/netflix_clone/index.html"
+                      class="text-decoration-none">
+                      <div class="image-holder"> <img src="images/netflix_clone.jpg" alt="Netflix Clone Logo"
+                          class="img-fluid"> </div>
                       <div class="caption mt-4 px-2">
                         <h4 class="fw-bold mb-2">Netflix Clone</h4>
                         <p class="text-muted mb-0">A Netflix-inspired UI project built to showcase streaming app design
                           and front-end layout skills.</p>
                       </div>
-                    </a>
-                  </div>
+                    </a> </div>
                 </div>
-
               </div>
             </div>
           </section>
-
           <section id="contact" class="my-5 py-5 bg-text" data-text="05">
             <div class="container">
               <div class="row justify-content-center mb-5">
-                <div class="col-lg-6" data-aos="fade-up">
-                  <span class="text-muted text-uppercase">Personal Info</span>
-                  <h2 class="display-1 txt-fx slide-up">Contact Me</h2>
+                <div class="col-lg-6 reveal-text"> <span class="text-muted text-uppercase">Personal Info</span>
+                  <h2 class="display-1 reveal-text">Say Hello</h2>
                   <p>Let's connect to build reliable, high-quality digital solutions that deliver real value.</p>
                 </div>
               </div>
-              <div class="row d-flex g-5">
-                <div class="col-lg-7" data-aos="fade-up">
-                  <h3>Contact Info</h3>
-                  <div class="accordion" id="accordionExample2">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                          data-bs-target="#accordion-collapse1" aria-expanded="true"
-                          aria-controls="accordion-collapse1">
-                          E-mail
-                        </button>
-                      </h2>
-                      <div id="accordion-collapse1" class="accordion-collapse collapse show"
-                        aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
-                        <div class="accordion-body">
-                          alshifam2004@gmail.com
+              <div class="row g-4 reveal-text">
+                <div class="col-lg-7">
+                  <div class="row g-4 h-100">
+                    <!-- Email Card -->
+                    <div class="col-12">
+                      <div class="contact-info-card p-4 rounded-4 shadow-sm border border-opacity-10 h-100 d-flex align-items-center">
+                        <div class="contact-icon-box me-4 rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(106, 17, 203, 0.1); color: #6a11cb; flex-shrink: 0;">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div>
+                          <h4 class="fw-bold mb-1">E-mail</h4>
+                          <p class="mb-0 text-muted">alshifam2004@gmail.com</p>
                         </div>
                       </div>
                     </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                          data-bs-target="#accordion-collapse2" aria-expanded="false"
-                          aria-controls="accordion-collapse2">
-                          Phone Number
-                        </button>
-                      </h2>
-                      <div id="accordion-collapse2" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample2">
-                        <div class="accordion-body">
-                          +91 7902466325
+                    <!-- Phone Card -->
+                    <div class="col-12">
+                      <div class="contact-info-card p-4 rounded-4 shadow-sm border border-opacity-10 h-100 d-flex align-items-center">
+                        <div class="contact-icon-box me-4 rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(37, 117, 252, 0.1); color: #2575fc; flex-shrink: 0;">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div>
+                          <h4 class="fw-bold mb-1">Phone Number</h4>
+                          <p class="mb-0 text-muted">+91 7902466325</p>
                         </div>
                       </div>
                     </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                          data-bs-target="#accordion-collapse3" aria-expanded="false"
-                          aria-controls="accordion-collapse3">
-                          Address
-                        </button>
-                      </h2>
-                      <div id="accordion-collapse3" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample2">
-                        <div class="accordion-body">
-                          Pathanamthitta,Kerala,India
+                    <!-- Address Card -->
+                    <div class="col-12">
+                      <div class="contact-info-card p-4 rounded-4 shadow-sm border border-opacity-10 h-100 d-flex align-items-center">
+                        <div class="contact-icon-box me-4 rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: rgba(255, 83, 74, 0.1); color: #FF534A; flex-shrink: 0;">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div>
+                          <h4 class="fw-bold mb-1">Address</h4>
+                          <p class="mb-0 text-muted">Pathanamthitta, Kerala, India</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
                 <div class="col-lg-5">
-                  <div
-                    class="message-me-container p-5 rounded-4 shadow-lg h-100 d-flex flex-column justify-content-center"
-                    data-aos="fade-up"
-                    style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); text-align: center; color: white; transition: all 0.3s ease;">
-                    <style>
-                      .message-me-container:hover {
-                        transform: translateY(-5px) scale(1.02);
-                        box-shadow: 0 15px 30px rgba(37, 117, 252, 0.3) !important;
-                      }
-
-                      .btn-message-me {
-                        background: white;
-                        color: #2575fc;
-                        font-weight: 600;
-                        border-radius: 50px;
-                        padding: 14px 32px;
-                        transition: all 0.3s ease;
-                        text-decoration: none;
-                        display: inline-flex;
-                        align-items: center;
-                        justify-content: center;
-                        border: none;
-                        font-size: 1.1rem;
-                      }
-
-                      .btn-message-me:hover {
-                        background: #f8f9fa;
-                        color: #6a11cb;
-                        transform: translateY(-2px) scale(1.05);
-                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-                      }
-                    </style>
+                  <div class="message-me-container p-5 rounded-4 shadow-lg h-100 d-flex flex-column justify-content-center text-center text-white">
                     <h3 class="fw-bold mb-3 text-white">Let's Connect</h3>
-                    <p class="mb-4" style="color: rgba(255,255,255,0.85); font-size: 1.1rem;">Have a project or
-                      opportunity? Feel free to reach out.</p>
+                    <p class="mb-4 opacity-75" style="font-size: 1.1rem;">Have a project or opportunity? Feel free to reach out.</p> 
                     <a href="mailto:alshifam2004@gmail.com?subject=Contact%20from%20Portfolio&amp;body=Hi%2C%20I%20saw%20your%20portfolio..."
-                      class="btn-message-me shadow-sm mt-2 mx-auto">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
-                        <use xlink:href="#mail"></use>
-                      </svg>
-                      Message Me
+                       class="btn-message-me shadow-sm mx-auto">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                      Message Me 
                     </a>
                   </div>
                 </div>
-
               </div>
             </div>
           </section>
-
-        </div>
-        <!-- / content wrapper -->
-
+        </div> <!-- / content wrapper -->
       </div>
     </main>
-
   </div>
-
   <script src="js/jquery-1.11.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/script.js"></script>
-  <!-- Firebase Connection -->
+  <script src="js/script.js"></script> <!-- Firebase Connection -->
   <script type="module" src="js/firebase-init.js"></script>
 </body>
 

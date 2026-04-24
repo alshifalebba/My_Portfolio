@@ -55,7 +55,7 @@
     },
   });
 
-  // Animate Texts
+  // Animate Texts (Letter-by-letter for specific headings)
   var initTextFx = function () {
     $('.txt-fx').each(function () {
       var newstr = '';
@@ -80,6 +80,127 @@
 
       this.innerHTML = arrWords.join("<span class='letter' style='transition-delay:"+ delay +"ms;'>&nbsp;</span>");
     });
+  }
+
+  // Premium Reveal Animations (Block-level)
+  var initRevealAnimations = function() {
+    console.log("Animation System: Initializing...");
+    
+    // Safety: Force all reveal-text elements to be visible immediately
+    $('.reveal-text, .hero-image-container').addClass('reveal-visible');
+    console.log("Animation System: Forced visibility on load.");
+
+    if (!('IntersectionObserver' in window)) {
+      console.warn("Animation System: IntersectionObserver not supported.");
+      return;
+    }
+
+    var observerOptions = {
+      threshold: 0.05,
+      rootMargin: "0px 0px -20px 0px"
+    };
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          console.log("Animation System: Element reveal triggered:", entry.target.className);
+          entry.target.classList.add('reveal-visible');
+          // Optionally unobserve after first reveal
+          // observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    $('.reveal-text, .hero-image-container').each(function() {
+      observer.observe(this);
+    });
+  }
+
+  // Sidebar Nav Indicator Logic
+  var initNavIndicator = function() {
+    var $menu = $('#one-page-menu');
+    if (!$menu.length) return;
+
+    var $indicator = $('<div class="nav-indicator"></div>').appendTo($menu);
+    
+    var updateIndicator = function() {
+      var $activeLink = $menu.find('.nav-link.active');
+      if ($activeLink.length) {
+        var menuOffset = $menu.offset().top;
+        var linkOffset = $activeLink.offset().top;
+        var linkHeight = $activeLink.outerHeight();
+        var indicatorHeight = 24; // matches CSS
+        
+        $indicator.css({
+          top: (linkOffset - menuOffset) + (linkHeight / 2) - (indicatorHeight / 2),
+          height: indicatorHeight
+        }).addClass('visible');
+      } else {
+        $indicator.removeClass('visible');
+      }
+    };
+
+    // Robust Scroll Tracking Fallback
+    var updateActiveSection = function() {
+      var scrollPos = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      var docHeight = $(document).height();
+      
+      // Edge case: Bottom of page
+      if (scrollPos + windowHeight >= docHeight - 50) {
+        $menu.find('.nav-link').removeClass('active');
+        $menu.find('.nav-link').last().addClass('active');
+        updateIndicator();
+        return;
+      }
+
+      $('section[id]').each(function() {
+        var top = $(this).offset().top - 250; // Increased offset for better trigger
+        var bottom = top + $(this).outerHeight();
+        if (scrollPos >= top && scrollPos < bottom) {
+          var id = $(this).attr('id');
+          var $targetLink = $menu.find('.nav-link[href="#' + id + '"]');
+          if ($targetLink.length) {
+            $menu.find('.nav-link').removeClass('active');
+            $targetLink.addClass('active');
+          }
+        }
+      });
+      updateIndicator();
+    };
+
+    // Smooth Scroll Implementation
+    $menu.find('.nav-link').on('click', function(e) {
+      var targetId = $(this).attr('href');
+      if (targetId && targetId.startsWith('#')) {
+        var $targetElement = $(targetId);
+        if ($targetElement.length) {
+          e.preventDefault();
+          
+          // Calculate offset - desktop has fixed sidebar
+          var isDesktop = window.innerWidth >= 992;
+          var offset = 0; // Default for mobile
+          
+          $('html, body').animate({
+            scrollTop: $targetElement.offset().top - offset
+          }, 800, function() {
+            // Update active state after scroll
+            window.location.hash = targetId;
+            updateActiveSection();
+          });
+          
+          // Mobile menu auto-close
+          if (window.innerWidth < 992 && $('body').hasClass('nav-active')) {
+            $('body').removeClass('nav-active');
+          }
+        }
+      }
+    });
+
+    // Sync events
+    setTimeout(updateActiveSection, 500);
+    $(window).on('scroll', updateActiveSection);
+    $(window).on('resize', updateIndicator);
   }
 
   // init Isotope
@@ -138,10 +259,15 @@
       $('body').toggleClass('nav-active');
     });
 
-    AOS.init({
-      duration: 1200,
-      // once: true,
-    })
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 1200,
+        once: true,
+      })
+    }
+
+    initRevealAnimations();
+    initNavIndicator();
 
   });
 
