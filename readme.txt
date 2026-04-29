@@ -61,9 +61,6 @@ portfolio/
 
 A community-based mobile application for readers and writers to explore books, share thoughts, and participate in discussions.
 
-### 🎨 Walify
-
-A wallpaper application with categorized high-quality wallpapers and a modern UI experience.
 
 ### 🎯 GoalSync
 
