@@ -247,6 +247,39 @@
     })
   }
 
+  // 3D Parallax Tilt Effect for Workspace Illustration
+  var initWorkspaceParallax = function() {
+    var $card = $('#interactive-workspace');
+    if (!$card.length) return;
+
+    var $scene = $card.find('.workspace-scene');
+
+    $card.on('mousemove', function(e) {
+      var width = $card.width();
+      var height = $card.height();
+      
+      // Get mouse position relative to container
+      var offset = $card.offset();
+      var localX = e.pageX - offset.left;
+      var localY = e.pageY - offset.top;
+      
+      // Calculate rotation based on cursor position (-10 to 10 degrees)
+      var rotateY = ((localX / width) - 0.5) * 20; // range: -10 to 10
+      var rotateX = (0.5 - (localY / height)) * 20; // range: -10 to 10
+
+      $scene.css({
+        'transform': 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)'
+      });
+    });
+
+    $card.on('mouseleave', function() {
+      $scene.css({
+        'transform': 'rotateX(0deg) rotateY(0deg)'
+      });
+    });
+  };
+
+
   $(document).ready(function () {
 
     overlayMenu();
@@ -268,6 +301,7 @@
 
     initRevealAnimations();
     initNavIndicator();
+    initWorkspaceParallax();
 
   });
 
